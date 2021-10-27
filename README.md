@@ -1,6 +1,5 @@
 # Coin flipping service
-## Project description
-Service returns randomly chosen coin site as json response.
+This is Spring Boot service that returns randomly chosen coin site as json response.
 ## Built with
 - java
 - spring boot
