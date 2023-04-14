@@ -26,7 +26,7 @@ public record CoinFlipper(int times, boolean isOverLimitAllowed) {
         if (isOverLimitAllowed) {
             return times;
         } else {
-            return times <= LIMIT ? times : LIMIT;
+            return Math.min(times, LIMIT);
         }
 
     }

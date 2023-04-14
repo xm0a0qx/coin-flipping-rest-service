@@ -14,10 +14,10 @@ import java.util.List;
 public class OutcomeData {
     private List<Coin> flippedCoins;
     private String decision;
-    private long heads;
-    private long tails;
-    private static final String MOVE = "MOVE FORWARD";
-    private static final String HOLD = "HOLD";
+    private long headsCount;
+    private long tailsCount;
+    private static final String HEAD = "HEAD";
+    private static final String TAILS = "TAILS";
 
     public static OutcomeData generateOutcome(List<Coin> flippedCoins) {
         long heads = countCoinSites(flippedCoins, CoinSites.HEAD.name());
@@ -28,8 +28,8 @@ public class OutcomeData {
     private static String decide(long heads,
                                  long tails) {
         return heads >= tails
-                ? MOVE
-                : HOLD;
+                ? HEAD
+                : TAILS;
     }
 
     private static long countCoinSites(List<Coin> flippedCoins,
